@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>游戏</title>
+    <style>
+        /*1:body内边距 10px*/
+        body{padding-top:10px;}
+        /*2:最外层父元素*/
+        .all_bg{
+            width:800px;
+            height:600px;
+            margin:0 auto;
+        }
+        /*3:画布父元素*/
+        #allcanvas{
+            position: relative;
+            width:800px;
+            height: 600px;
+            margin:0;
+        }
+        /*4:画布一*/
+        #c1{
+            position: absolute;
+            width:800px;
+            height:600px;
+            left:0;
+            bottom:0;
+            z-index: 1;
+        }
+        /*5:画布二*/
+        #c2{
+            position: absolute;
+            width:800px;
+            height:600px;
+            left:0;
+            bottom:0;
+            z-index:0;
+        }
+    </style>
+</head>
+<body>
+    <!--创建父容器-->
+    <div class="all_bg">
+        <!--创建画布父容器，两个画布-->
+        <div id="allcanvas">
+            <canvas id="c1" width="800" height="600">大鱼，小鱼，分数</canvas>
+            <canvas id="c2" width="800" height="600">背景，海葵，食物</canvas>
+        </div>
+    </div>
+    <script src="js/commonFunctions.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/background.js"></script>
+    <script src="js/ane.js"></script>
+</body>
+</html>

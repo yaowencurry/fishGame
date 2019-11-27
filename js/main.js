@@ -9,6 +9,8 @@ var canHeight;
 var bgPic;
 //1.2:创建全局变量保存海葵对象
 var ane;
+//1.3:创建全局变量保存食物对象
+var fruit;
 //创建函数game      游戏第一个执行函数
 function game(){
     init();
@@ -30,6 +32,9 @@ function init(){
     //3.2:创建海葵对象并调用初始化方法
     ane=new aneObj();
     ane.init();
+    //3.3:创建食物对象并调用初始化方法
+    fruit=new fruitObj();
+    fruit.init();
 }
 //创建函数gameloop  游戏创建定时器循环绘制所有元素
 function gameloop(){
@@ -39,6 +44,10 @@ function gameloop(){
     drawBackground();
     //4.3:绘制海葵对象
     ane.draw();
+    //4.4:绘制食物对象
+    fruitMonitor();
+    fruit.draw();
+    //5:调用监听画布的对象
 }
 //当页面成功加载后，调用函数game
 document.body.onload=game;
